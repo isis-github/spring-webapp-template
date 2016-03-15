@@ -14,5 +14,6 @@
     <container-descriptor>
         <prefer-web-inf-classes>true</prefer-web-inf-classes>
     </container-descriptor>
+    <context-root>projectName</context-root>
 
 </weblogic-web-app>
