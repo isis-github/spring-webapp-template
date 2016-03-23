@@ -35,8 +35,8 @@
     value="?page.page=${currentIndex - 1}&amp;${query}" />
   <c:url var="nextUrl"
     value="?page.page=${currentIndex + 1}&amp;${query}" />
-
-  <ul class="pagination">
+<div>
+  <ul class="pagination pull-left row">
     <c:choose>
       <c:when test="${page.number == 0}">
         <li class="disabled"><a href="#">&lt;&lt;</a></li>
@@ -70,4 +70,14 @@
       </c:otherwise>
     </c:choose>
   </ul>
+  
+  <ul class="pagination pull-right row">
+    <li><a>${beginIndex}-${endIndex} of ${page.totalPages} 页</a></li>
+    <li><a>总数: ${page.totalElements}</a></li>
+    <li><span>每页显示: <select style="width:60px;" ><option value="5">5</option><option value="5">10</option><option value="5">15</option></select></span></li>
+    <li><span>第:<input style="height: 20px;width:60px;" type="text" value="${page.number+1}"/>页</span></li>
+    <li style="float:right;"><a>GO</a></li>
+  </ul>
+<div class="row"></div>
+</div>
 </jsp:root>
